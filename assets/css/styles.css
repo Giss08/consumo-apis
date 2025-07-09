@@ -1,0 +1,479 @@
+/* Importar la fuente local */
+@font-face {
+    font-family: 'Principal';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+    font-style: normal; /*define si va a ser normal o italic*/
+   
+}
+/* Aplicarla en todo el sitio */
+*{
+    font-family: 'Principal';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+button{
+    border: 0 solid transparent;
+}
+/* Variables de estilo */
+:root{       
+    --bg-color: #18181B;
+    --morado: #7A4493;
+    --azul: #1d9bbb;
+    --blanco: #ffffff;
+}
+
+/* ESTILOS HOME */
+
+#cont-global{
+    width: 100%;
+    max-width: 430px;
+    background: var(--bg-color);
+    height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    margin: 0 auto;
+    position:relative;
+    overflow: hidden;
+}
+
+.cont-img{
+    width: 100%;
+    position: relative;
+    padding-top: 40px;
+    height: 500px;
+    pointer-events: none; /* Evita que los eventos del mouse afecten las imágenes */
+}
+
+img{
+    max-width: 100%;
+}
+
+.cont-img img:nth-child(1) { 
+    animation: entrada 1.5s ease-out;
+   
+   
+}
+/* Solo modifica la imagen 2*/
+.cont-img img:nth-child(2) { 
+    position: relative; 
+    top: -120px;
+    animation: entrada 1s ease-out;
+   
+   
+}
+
+.cont-img img:nth-child(3) {
+    position: relative;
+    top: -238px;
+    animation: entrada 0.8s ease-out;
+   
+   
+}
+
+.cont-info{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.cont-info .logo{
+    animation: entrada 1s;
+    animation: entrada .5s ease-out;
+    margin-bottom: 25px;
+}
+
+.cont-info p{
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 40px;
+    animation: entrada 1s;
+    animation: entrada .5s ease-out; /* Retraso para que aparezca después de las imágenes */
+ 
+}
+
+
+.btn-principal{
+    padding: 16px 30px;
+    color: var(--blanco);
+    background : linear-gradient(to right, var(--azul), var(--morado));
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 40px;
+    display: inline-block; 
+    animation: entrada .5s ease-out;
+    min-width: 230px; /* Ancho mínimo para el botón */
+    border: 0px;
+    
+
+
+
+}
+
+@keyframes entrada {
+     from {
+        transform: translateY(200px);
+        opacity: 0;
+     }
+     to {
+        transform: translateY(0);
+        opacity: 1;
+     }
+
+}
+
+/* ESTILOS LOGIN */
+
+.cont-login{
+    width: 100%;
+    padding-top: 40%;
+    text-align: center;
+    animation: entrada .5s ease-out;
+}
+
+.cont-login p{
+    color: var(--blanco);
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.cont-login form{
+    width: 100%;
+    padding: 0 40px;;
+
+}
+
+.cont-login form label{
+    color: var(--blanco);
+    font-size: 16px;
+    width: 100%;
+    display: block;  
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.cont-login form input{
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border-radius: 40px;
+    border-top: 1px solid var(--azul);
+    border-left: 1px solid var(--azul);
+    border-right: 1px solid var(--morado);
+    border-bottom:  1px solid var(--morado);
+    margin-bottom: 12px;
+    color: var(--blanco);
+}
+
+/* ESTILOS DASHBOARD */
+
+header{
+    width: 100%;
+    max-width: 430px;
+    position: relative;
+  
+}
+
+header .top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px 0;
+
+}
+
+header .top .welcome{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .welcome img{
+    width: 60px;
+    border: 4px solid var(--azul);
+    border-radius: 50%;
+}
+
+header .welcome h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--blanco);
+    margin-left: 6px;
+
+
+}
+
+header .welcome span{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+header #btnMenu{
+    background: transparent;
+    border: 0 solid transparent;
+}
+
+header hr{
+    border: 1px solid #666666;
+    margin: 20px 0;
+}
+
+header .buscador{
+    width: 100%;
+    position: relative;
+    padding: 0 30px;
+}
+
+.buscador label{
+    font-size: 14px;
+    color: #666666;
+    width: 100%;
+
+}
+
+.buscador input{
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border-radius: 40px;
+    border-top: 1px solid var(--azul);
+    border-left: 1px solid var(--azul);
+    border-right: 1px solid var(--morado);
+    border-bottom:  1px solid var(--morado);
+    margin-bottom: 12px;
+    color: var(--blanco);
+    margin-top: 6px;
+}
+
+.buscador button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background : linear-gradient(to right, var(--azul), var(--morado));
+    position: absolute;
+    right: 28px;
+    top: 25px;
+
+}
+
+.buscador button img{
+    width: 16px;
+}
+
+main{
+    width: 100%;
+    padding: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 610px;
+    overflow: scroll;
+
+}
+
+main .pelicula{
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+main .pelicula button{
+    background: transparent;
+    padding: 0;
+}
+
+main .pelicula img{
+    border-radius: 10px;
+}
+
+main .pelicula h2{
+    font-size: 12px;
+    color: var(--blanco);
+}
+main .pelicula h3{
+    font-size: 10px;
+    color: var(--azul);
+}
+
+footer{
+    width: 100%;
+    border-color: 1px solid #666666;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+footer button{
+    width: 33%;
+    background: transparent;
+    color: var(--blanco);
+    padding: 4px;
+}
+
+footer button:nth-child(1){
+    border-right: 1px solid #fff;
+}
+
+footer button:nth-child(2){
+    border-right: 1px solid #fff;
+}
+
+/* ESTILOS MODAL */
+
+#modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    top: 110vh;
+    left: 0;
+    background: var(--bg-color);
+    transition: 1s;
+
+}
+
+#modal.active{
+    top: 0;
+}
+
+#modal .modal-header{
+    position: relative;
+}
+
+#modal #close-modal{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: var(--bg-color);
+    border-radius: 50%;
+}
+
+#modal .modal-header h1{
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 30px 0;
+}
+
+#modal .modal-header h2{
+    color: var(--azul);
+    font-size: 16px;
+    padding: 4px 30px 30px;
+
+}
+
+#modal .modal-header hr{
+    border: 1px solid var(--azul);
+    
+}
+
+#modal .modal-body{
+    padding: 10px 30px;
+
+
+}
+
+#modal .modal-body p{
+    color: #fff;
+    font-size: 14px;
+}
+
+#modal .modal-body button{
+    padding: 16px 40px;
+    color: var(--blanco);
+    background : linear-gradient(to right, var(--azul), var(--morado));
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 40px;
+    display: flex;
+    animation: entrada .5s ease-out;
+    min-width: 230px; /* Ancho mínimo para el botón */
+    border: 0 solid;
+    align-items: center;
+    font-size: 16px;
+}
+
+#modal .modal-body h2{
+    color: var(--azul);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#modal .modal-body h3{
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+#modal .modal-body button img{
+    width: 18px;
+    margin-left: 20px;
+}
+
+/* ESTILOS MENÚ LATERAL */
+
+#menu {
+    width: 50%;
+    height: 100vh;
+    background: var(--bg-color);
+    padding: 50px 20px 80px;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: -300px;
+    transition: 1s;
+    
+}
+
+#menu button{
+   background: transparent;
+   position: absolute;
+   top: 60px;
+   left: -12px;
+   
+}
+
+#menu h2{
+    color: var(--azul);
+    font-size: 14px;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    text-align: right;
+
+}
+
+#menu a{
+    color: var(--blanco);
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    line-height: 30px;
+
+    
+}
+
+#menu ul a{
+    text-decoration: none;
+    line-height: normal;
+}
+
+#menu ul{
+    margin-top: 120px;
+}
+#menu.active{
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
